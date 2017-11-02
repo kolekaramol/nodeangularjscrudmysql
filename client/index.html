@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta>
+    <title>MEAN CRUD AAPLICATION</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </head>
+
+<body>
+    <div class="container">
+        <br/>
+        <div class="row">
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="#/"><span class="glyphicon glyphicon-home"></span>&nbsp;Home Link</a></li>
+                        <li><a href="#/customers"><span class="glyphicon glyphicon-list"></span>&nbsp;Customer list</a></li>
+                        <li><a href="#/customers/create"><span class="glyphicon glyphicon-plus"></span>&nbsp;Customer Entry Screen </a></li>
+                        <li><a href="#/customers/search"><span class="glyphicon glyphicon-search"></span>&nbsp;Customer search </a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr/>
+            <div ng-view> </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js."></script> -->
+    <!-- <script src="bower_components/angular/angular.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/controller.js"></script>
+</body>
+
+</html>

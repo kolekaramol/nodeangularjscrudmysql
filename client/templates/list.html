@@ -1,0 +1,27 @@
+<div class="panel panel-default" ng-init="getCustomers()">
+    <div class="panel-heading">
+        <p class="panel-title"><span class="glyphicon glyphicon-list"></span>&nbsp;Customers List</p>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Customer Code</th>
+                    <th>Mobile No</th>
+                    <th>Eamil Id</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="customer in customers">
+                    <td>{{ customer.customerName | uppercase}} &nbsp;{{customer.lastName | uppercase}} </td>
+                    <td>{{ customer.customerCode | uppercase}}</td>
+                    <td>{{ customer.mobileNumber }}</td>
+                    <td><a>{{ customer.emailId }}</a></td>
+                    <td> <a href="#/customers/show/{{customer.customerCode}}" class="btn btn-info">Select</a> <a href="#/customers/edit/{{customer.customerCode}}" class="btn btn-success"><span         class="glyphicon glyphicon-edit"></span>&nbsp;Edit</a> <a ng-click="deleteCustomer(customer.customerCode)" class="btn btn-danger"><span           class="glyphicon glyphicon-trash"></span>&nbsp;Delete</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
